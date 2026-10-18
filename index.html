@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlipMart – Online Shopping (Flipkart-style demo)</title>
+  <link rel="stylesheet" href="style.css"/>
+  
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="#" class="logo" aria-label="FlipMart home">Flip<span>Mart</span><small>Explore <em>Plus</em></small></a>
+    <form class="search" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search for products, brands and more" aria-label="Search products">
+      <button type="submit" aria-label="Search">&#128269;</button>
+    </form>
+    <button class="link-btn" id="loginBtn">Login</button>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">&#128722; Cart <span class="badge" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<nav class="cats" id="cats" aria-label="Categories"></nav>
+
+<main class="wrap">
+  <section class="hero" aria-label="Offers">
+    <div class="slides" id="slides"></div>
+    <button class="arrow prev" id="prev" aria-label="Previous">&#10094;</button>
+    <button class="arrow next" id="next" aria-label="Next">&#10095;</button>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2 id="listTitle">Best of Electronics &amp; More</h2>
+      <label class="sort">Sort by
+        <select id="sortSelect">
+          <option value="rel">Relevance</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Rating</option>
+        </select>
+      </label>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No products found. Try a different search or category.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">Demo store built with HTML, CSS and JavaScript. Not affiliated with Flipkart.</div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head"><h3>My Cart</h3><button id="closeCart" aria-label="Close cart">&times;</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="row"><span>Total</span><strong id="cartTotal">&#8377;0</strong></div>
+    <button class="primary" id="checkoutBtn">Place Order</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
